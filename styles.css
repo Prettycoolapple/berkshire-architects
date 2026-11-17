@@ -356,7 +356,89 @@ h2 { font-size: clamp(37px, 5vw, 74px); }
 .process-steps summary:hover { color: var(--secondary); }
 .process-steps p { max-width: 51ch; padding: 0 18px 16px 2px; color: var(--secondary); font-size: 15px; line-height: 1.6; }
 
-.credentials { padding-block: clamp(34px, 5vw, 68px); }
+.services { padding-block: var(--section-space); }
+.services h2 { margin-bottom: clamp(24px, 4vw, 58px); }
+
+.service-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(14px, 2vw, 28px);
+  isolation: isolate;
+}
+
+.service-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: clamp(380px, 36vw, 520px);
+  border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 44px);
+  background: #30302c;
+  color: #fff;
+}
+
+.service-image, .service-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.service-card::after {
+  background: linear-gradient(0deg, rgb(12 14 12 / 92%), rgb(12 14 12 / 72%) 29%, rgb(12 14 12 / 28%) 56%, transparent 83%);
+  content: '';
+}
+
+.service-card .service-image { background: #30302c; }
+.service-image img { object-position: center 52%; }
+.service-copy { position: relative; z-index: 1; }
+
+.service-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(35px, 4.5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+}
+
+.service-copy p {
+  max-width: 51ch;
+  color: #f5f5f4;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.service-residential {
+  grid-column: 1 / -1;
+  min-height: clamp(440px, 46vw, 680px);
+  padding-bottom: clamp(54px, 7.2vw, 108px);
+  --zoom-end: 1.16;
+}
+
+.service-residential .service-copy h3 { font-size: clamp(44px, 6vw, 84px); }
+.service-residential .service-copy p { max-width: 50ch; }
+
+.service-subdivision {
+  z-index: 1;
+  margin-top: calc(-1 * clamp(32px, 4.5vw, 66px));
+  margin-left: clamp(0px, 2.4vw, 36px);
+  box-shadow: 0 0 0 clamp(3px, 0.42vw, 7px) var(--paper);
+}
+
+.service-interiors { margin-right: clamp(0px, 2.4vw, 36px); }
+
+.credentials {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: center;
+  gap: clamp(23px, 4vw, 50px);
+  padding-block: clamp(34px, 5vw, 68px);
+  border-top: 1px solid var(--line);
+}
+
+.practice-mark { display: block; width: 100%; max-width: 300px; height: auto; }
 
 .credentials h2 {
   margin-bottom: 20px;
@@ -391,6 +473,21 @@ h2 { font-size: clamp(37px, 5vw, 74px); }
 .contact-detail > p { margin-top: 18px; }
 .contact-detail address { display: grid; justify-items: start; gap: 7px; margin-top: 24px; font-style: normal; }
 .contact-detail address a { min-height: 34px; padding-block: 7px; font-weight: 550; text-underline-offset: 4px; }
+
+.contact-detail .call-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--paper);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.contact-detail .call-link:hover { border-color: var(--ink); }
 
 .enquiry-form {
   display: grid;
@@ -489,6 +586,7 @@ h2 { font-size: clamp(37px, 5vw, 74px); }
   .section-grid, .process-grid { column-gap: 30px; }
   .hero-media { height: clamp(390px, 70vw, 620px); }
   .approach-collage { height: clamp(390px, 61vw, 500px); }
+  .credentials ul { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
@@ -511,11 +609,22 @@ h2 { font-size: clamp(37px, 5vw, 74px); }
   .approach-collage .collage-photo { align-self: start; }
   .approach-summary { align-items: start; flex-direction: column; gap: 14px; }
   .process-grid { row-gap: 32px; }
-  .credentials ul { grid-template-columns: 1fr; }
+  .service-gallery, .credentials { grid-template-columns: 1fr; }
+  .service-card { min-height: clamp(360px, 106vw, 470px); }
+  .service-residential { padding-bottom: clamp(20px, 3vw, 44px); }
+  .service-subdivision, .service-interiors { margin: 0; box-shadow: none; }
+  .practice-mark { max-width: 265px; }
   .contact-inner { row-gap: 32px; }
   .footer-row { grid-template-columns: 1fr auto; row-gap: 4px; }
   .footer-location { grid-row: 2; text-align: left; }
   .back-top { grid-column: 2; grid-row: 1; }
+}
+
+@media (max-width: 380px) {
+  .header-inner { width: calc(100% - 24px); gap: 8px; }
+  .primary-nav { gap: 7px; }
+  .primary-nav .nav-contact { padding-inline: 8px; }
+  .nav-contact span { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
