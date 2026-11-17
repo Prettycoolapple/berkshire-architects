@@ -1,10 +1,10 @@
 # Berkshire Architects
 
-A static website preview for the New Zealand residential architecture and interiors practice. The page and its images, fonts and scripts are served locally, with no build step.
+A static website for Berkshire Architects, a New Zealand practice for residential architecture, subdivision and interiors. The pages and their assets need no build step.
 
 ## Preview
 
-Run `python -m http.server 4178 --bind 127.0.0.1` from this directory and open [the local preview](http://127.0.0.1:4178/). You can also open `index.html` directly in a browser.
+Run `python -m http.server 4178 --bind 127.0.0.1` from this directory and open [the local preview](http://127.0.0.1:4178/).
 
 ## Publish with GitHub Pages
 
@@ -14,6 +14,12 @@ Run `python -m http.server 4178 --bind 127.0.0.1` from this directory and open [
 
 GitHub publishes the Pages URL using the account’s username. GitHub Free supports Pages from public repositories. See [GitHub Pages availability](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
+## Search discovery
+
+The homepage and three service pages are listed in [the sitemap](https://prettycoolapple.github.io/berkshire-architects/sitemap.xml). On each page, the canonical URL, social previews and structured data use the current public GitHub Pages URL. Submit the sitemap in [Google Search Console](https://search.google.com/search-console/) after verifying the site property.
+
+When switching to `berkshire.nz`, replace the GitHub Pages base URL in the four HTML files and `sitemap.xml` with the new HTTPS base. Verify each canonical URL and social image at the new domain, then submit the new sitemap in Search Console.
+
 ## Enquiry form
 
 The site displays `admin@berkshire.nz` and a Call us button. The enquiry form submits a first name, email address and contact number to that mailbox through [FormSubmit](https://formsubmit.co/). GitHub Pages serves the static site while FormSubmit handles the email delivery.
@@ -22,9 +28,7 @@ Once `admin@berkshire.nz` can receive mail, send a test enquiry from the live si
 
 ## Image sources
 
-- `assets/images/concrete-passage.webp` — [1933 Old Millfun, photographed by Declan Sun](https://unsplash.com/photos/a-concrete-brutalist-building-with-stairs-and-windows-1K65uaupMVA).
-- `assets/images/concrete-stair.webp` — [Lugdunum Museum, photographed by Sébastien Lavalaye](https://unsplash.com/photos/a-modern-spiral-staircase-ascends-inside-a-concrete-building-gNY6RsMIsPo).
-- Both photographs use the [Unsplash License](https://unsplash.com/license).
+- The NZIA Practice mark was supplied by Berkshire Architects.
 - Font licences are in `assets/fonts/`.
 
 ### Concept renders

@@ -4,15 +4,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2f3f5">
-  <meta name="description" content="Berkshire Architects is a New Zealand architecture practice specialising in residential design, subdivision and interiors.">
+  <meta name="description" content="Berkshire Architects is a New Zealand architecture practice designing bespoke homes, residential subdivisions and interiors around the people who use them.">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="canonical" href="https://prettycoolapple.github.io/berkshire-architects/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Berkshire Architects">
-  <meta property="og:description" content="Residential architecture and interiors shaped by everyday life and the possibilities of place.">
-  <title>Berkshire Architects — Architecture &amp; Interiors, New Zealand</title>
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:site_name" content="Berkshire Architects">
+  <meta property="og:url" content="https://prettycoolapple.github.io/berkshire-architects/">
+  <meta property="og:title" content="Berkshire Architects | Residential, Subdivision &amp; Interiors NZ">
+  <meta property="og:description" content="A New Zealand architecture practice for bespoke homes, residential subdivisions and interiors.">
+  <meta property="og:image" content="https://prettycoolapple.github.io/berkshire-architects/assets/images/coastal-house.webp">
+  <meta property="og:image:alt" content="A low concrete house set among coastal grasses">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Berkshire Architects | Residential, Subdivision &amp; Interiors NZ</title>
   <link rel="icon" href="data:,">
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script src="site.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://prettycoolapple.github.io/berkshire-architects/#organisation",
+          "name": "Berkshire Architects",
+          "url": "https://prettycoolapple.github.io/berkshire-architects/",
+          "description": "A New Zealand architecture practice for bespoke homes, residential subdivision and interiors.",
+          "areaServed": { "@type": "Country", "name": "New Zealand" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://prettycoolapple.github.io/berkshire-architects/#website",
+          "name": "Berkshire Architects",
+          "url": "https://prettycoolapple.github.io/berkshire-architects/",
+          "inLanguage": "en-NZ",
+          "publisher": { "@id": "https://prettycoolapple.github.io/berkshire-architects/#organisation" }
+        }
+      ]
+    }
+  </script>
 </head>
 <body id="home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +68,7 @@
       </picture>
       <div class="hero-copy wrap" data-reveal>
         <h1 id="hero-title">A home, <span>distinctly yours.</span></h1>
-        <p class="hero-description">New Zealand architecture and interiors, shaped around how you live.</p>
+        <p class="hero-description">We design homes, residential subdivisions and interiors across Aotearoa New Zealand.</p>
         <a class="button-link" href="#approach">Explore our approach <span aria-hidden="true">↓</span></a>
       </div>
     </section>
@@ -72,28 +103,20 @@
         <div class="process-copy" data-reveal>
           <p class="eyebrow">How we work</p>
           <h2 id="process-title">From questions to design.</h2>
-          <div class="process-steps">
-            <details name="design-process" open>
-              <summary>Listen &amp; understand</summary>
-              <p>We talk through a typical day in your home and what could make it better. That gives us a brief grounded in real life.</p>
-            </details>
-            <details name="design-process">
-              <summary>Explore the possibilities</summary>
-              <p>We test layouts, daylight, and how the home sits on the land before choosing a direction together.</p>
-            </details>
-            <details name="design-process">
-              <summary>Resolve the details</summary>
-              <p>We refine what you’ll see and touch every day, from a window that frames the view to the feel of the materials underfoot.</p>
-            </details>
-          </div>
         </div>
-        <div class="process-photos">
-          <figure class="frame collage-photo process-passage" data-reveal>
-            <img src="assets/images/concrete-passage.webp" alt="Sunlight crossing the walkways of a concrete building" loading="lazy" decoding="async">
-          </figure>
-          <figure class="frame collage-photo process-stair" data-reveal>
-            <img src="assets/images/concrete-stair.webp" alt="A curved staircase in a softly lit concrete interior" loading="lazy" decoding="async">
-          </figure>
+        <div class="process-steps" data-reveal>
+          <details name="design-process" open>
+            <summary>Listen &amp; understand</summary>
+            <p>We talk through a typical day in your home and what could make it better. That gives us a brief grounded in real life.</p>
+          </details>
+          <details name="design-process">
+            <summary>Explore the possibilities</summary>
+            <p>We test layouts, daylight, and how the home sits on the land before choosing a direction together.</p>
+          </details>
+          <details name="design-process">
+            <summary>Resolve the details</summary>
+            <p>We refine what you’ll see and touch every day, from a window that frames the view to the feel of the materials underfoot.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -108,6 +131,7 @@
           <div class="service-copy">
             <h3>Residential</h3>
             <p>We design homes around your routines and the character of the site. We test how the plan works for daylight, views and privacy, then refine the spaces and materials around how you want to live.</p>
+            <a href="services/residential/">Explore residential architecture <span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="service-card service-subdivision collage-photo" data-reveal>
@@ -117,6 +141,7 @@
           <div class="service-copy">
             <h3>Subdivision</h3>
             <p>We test what a site can accommodate, from a second home to several dwellings. We look at access, slope, services and planning constraints early, so you can compare options before committing to a layout.</p>
+            <a href="services/subdivision/">Explore subdivision design <span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="service-card service-interiors collage-photo" data-reveal>
@@ -126,24 +151,16 @@
           <div class="service-copy">
             <h3>Interiors</h3>
             <p>We design kitchens, joinery, lighting and finishes as part of the architecture. We consider how materials meet, how light moves through a room and how the space works every day.</p>
+            <a href="services/interiors/">Explore interior design <span aria-hidden="true">↗</span></a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="credentials wrap" aria-labelledby="credentials-title" data-reveal>
+    <section class="credentials wrap" id="credentials" aria-labelledby="credentials-title" data-reveal>
       <div>
-        <h2 id="credentials-title">Our architect’s credentials</h2>
-        <ul>
-          <li>
-            <svg class="credential-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-            <span><strong>New Zealand Registered Architect</strong><a href="https://www.nzrab.nz/">New Zealand Registered Architects Board</a></span>
-          </li>
-          <li>
-            <svg class="credential-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="10" r="1.5"/><path d="M6 15c.6-1 1.4-1.5 2.5-1.5S10.4 14 11 15m3-5h4m-4 4h4"/></svg>
-            <span><strong>NZIA member</strong><a href="https://www.nzia.co.nz/">Te Kāhui Whaihanga New Zealand Institute of Architects</a></span>
-          </li>
-        </ul>
+        <h2 id="credentials-title">Practice credentials</h2>
+        <p>Berkshire Architects is an NZIA Practice. Our architect is a <a href="https://www.nzrab.nz/">New Zealand Registered Architect</a> and a member of <a href="https://www.nzia.co.nz/">Te Kāhui Whaihanga New Zealand Institute of Architects</a>.</p>
       </div>
       <img class="practice-mark" src="assets/images/nzia-practice.png" width="1392" height="474" alt="Te Kāhui Whaihanga NZIA Practice" loading="lazy" decoding="async">
     </section>
@@ -157,8 +174,12 @@
             <a href="mailto:admin@berkshire.nz">admin@berkshire.nz</a>
             <a class="call-link" href="tel:+64278877007">Call us <span aria-hidden="true">↗</span></a>
           </address>
+          <details class="enquiry-privacy">
+            <summary>Enquiry privacy</summary>
+            <p>We use your name, email address and contact number to reply to your enquiry. FormSubmit processes the form on our behalf. You can email us directly, or ask us to access or correct your details, at <a href="mailto:admin@berkshire.nz">admin@berkshire.nz</a>.</p>
+          </details>
         </div>
-        <form class="enquiry-form" action="https://formsubmit.co/admin@berkshire.nz" method="post" aria-label="Project enquiry" aria-describedby="enquiry-privacy" data-reveal>
+        <form class="enquiry-form" action="https://formsubmit.co/admin@berkshire.nz" method="post" aria-label="Project enquiry" aria-describedby="enquiry-requirements" data-reveal>
           <input type="hidden" name="_subject" value="New Berkshire Architects enquiry">
           <label for="first-name">First name</label>
           <input id="first-name" name="name" type="text" autocomplete="given-name" maxlength="100" required>
@@ -166,7 +187,7 @@
           <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
           <label for="phone">Contact number</label>
           <input id="phone" name="phone" type="tel" autocomplete="tel" pattern="(?=(?:\D*\d){7,15}\D*$)[0-9+\(\) .\-]+" title="Enter a phone number with 7 to 15 digits, including any country code." maxlength="32" required>
-          <p id="enquiry-privacy">All three fields are required to submit. FormSubmit delivers your details to Berkshire Architects so we can reply. Email us to access or correct your details.</p>
+          <p id="enquiry-requirements">All three fields are required to submit</p>
           <button class="button-link" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
         </form>
       </div>
