@@ -16,9 +16,7 @@ GitHub publishes the Pages URL using the account’s username. GitHub Free suppo
 
 ## Search discovery
 
-The homepage and three service pages are listed in [the sitemap](https://prettycoolapple.github.io/berkshire-architects/sitemap.xml). On each page, the canonical URL, social previews and structured data use the current public GitHub Pages URL. Submit the sitemap in [Google Search Console](https://search.google.com/search-console/) after verifying the site property.
-
-When switching to `berkshire.nz`, replace the GitHub Pages base URL in the four HTML files and `sitemap.xml` with the new HTTPS base. Verify each canonical URL and social image at the new domain, then submit the new sitemap in Search Console.
+The homepage and three service pages are listed in [the sitemap](https://berkshire.nz/sitemap.xml). The canonical URLs, social previews and structured data use `https://berkshire.nz/`. The root `robots.txt` also points to the sitemap. Use the `berkshire.nz` Domain property in [Google Search Console](https://search.google.com/search-console/) to monitor indexing.
 
 ## Enquiry form
 
