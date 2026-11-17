@@ -20,9 +20,17 @@ The homepage and three service pages are listed in [the sitemap](https://berkshi
 
 ## Enquiry form
 
-The site displays `admin@berkshire.nz` and a Call us button. The enquiry form submits a first name, email address and contact number to that mailbox through [FormSubmit](https://formsubmit.co/). GitHub Pages serves the static site while FormSubmit handles the email delivery.
+The contact form sends the visitor’s first name, email address, contact number and message directly to the `berkshire-enquiry` Edge Function. It returns a confirmation after saving the enquiry. The public email link and Call us button remain available.
 
-Once `admin@berkshire.nz` can receive mail, send a test enquiry from the live site and confirm the address using FormSubmit’s activation email. Submit again and check that all three fields arrive. Repeat the delivery check after switching the website to `berkshire.nz`. Set up the mailbox and its MX records with your email provider independently from the GitHub Pages domain records.
+Enquiries are available to project administrators in **Berkshire Enquiries → Table Editor → berkshire_enquiries**. The database keeps a delivery timestamp and an attempt count. The function attempts an SMTP notification after saving and the scheduled job retries pending notifications. If delivery is still missing after six attempts, check the SMTP settings and restore the row to the queue by setting `notification_attempts` to `0` and `notification_due_at` to the current time.
+
+To provision a replacement backend:
+
+1. Run `supabase/enquiries.sql` in the new project's SQL Editor.
+2. Deploy `supabase/functions/berkshire-enquiry/index.ts` as `berkshire-enquiry` with gateway JWT verification disabled for anonymous submissions. The function exposes submission only and limits which requests can use the notification retry route.
+3. Set `SMTP_USER`, `SMTP_APP_PASSWORD` and `LEAD_NOTIFY_TO` in the project's Edge Function Secrets. Gmail uses implicit TLS on port 465. Optional `SMTP_HOST` and `ENQUIRY_SITE_ORIGIN` override the Gmail host and production origin for testing.
+4. Substitute the project URL in `supabase/schedule-enquiries.sql` and run it in the SQL Editor. Use the new project's function URL as the form's `data-endpoint`.
+5. Submit a synthetic enquiry and verify the confirmation on the page, the database record and the notification in the destination inbox.
 
 ## Image sources
 

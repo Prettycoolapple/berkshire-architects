@@ -19,8 +19,8 @@
   <title>Berkshire Architects | Residential, Subdivision &amp; Interiors NZ</title>
   <link rel="icon" href="data:,">
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=4">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="site.js?v=2" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -176,19 +176,26 @@
           </address>
           <details class="enquiry-privacy">
             <summary>Enquiry privacy</summary>
-            <p>We use your name, email address and contact number to reply to your enquiry. FormSubmit processes the form on our behalf. You can email us directly, or ask us to access or correct your details, at <a href="mailto:admin@berkshire.nz">admin@berkshire.nz</a>.</p>
+            <p>We store your contact details and message so we can reply to your enquiry. To access or correct your details, email <a href="mailto:admin@berkshire.nz">admin@berkshire.nz</a>.</p>
           </details>
         </div>
-        <form class="enquiry-form" action="https://formsubmit.co/admin@berkshire.nz" method="post" aria-label="Project enquiry" aria-describedby="enquiry-requirements" data-reveal>
-          <input type="hidden" name="_subject" value="New Berkshire Architects enquiry">
+        <form class="enquiry-form" method="post" aria-label="Project enquiry" aria-describedby="enquiry-requirements" data-endpoint="https://snxzozhpoxkqrjoywzvi.supabase.co/functions/v1/berkshire-enquiry" data-reveal>
           <label for="first-name">First name</label>
           <input id="first-name" name="name" type="text" autocomplete="given-name" maxlength="100" required>
           <label for="email">Email</label>
           <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
           <label for="phone">Contact number</label>
           <input id="phone" name="phone" type="tel" autocomplete="tel" pattern="(?=(?:\D*\d){7,15}\D*$)[0-9+\(\) .\-]+" title="Enter a phone number with 7 to 15 digits, including any country code." maxlength="32" required>
-          <p id="enquiry-requirements">All three fields are required to submit</p>
-          <button class="button-link" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" maxlength="2000" required></textarea>
+          <div class="enquiry-trap" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <p id="enquiry-requirements">All four fields are required to submit</p>
+          <button class="button-link" type="submit" disabled>Send enquiry <span aria-hidden="true">↗</span></button>
+          <p class="enquiry-status" role="status"></p>
+          <noscript><p>Please email <a href="mailto:admin@berkshire.nz">admin@berkshire.nz</a> to send your enquiry.</p></noscript>
         </form>
       </div>
     </section>
